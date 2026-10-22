@@ -1,25 +1,80 @@
 aid: withpoly-com
+
 name: Poly
-description: 'Poly is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by bloomberg-beta) and added to the network as a stub for full-pipeline profiling.'
-url: https://raw.githubusercontent.com/api-evangelist/withpoly-com/refs/heads/main/apis.yml
+
+image: https://poly.app/og-social.jpg
+
+description: 'Poly is a technology company offering a collaborative platform that enables users to create, share, and interact with immersive 3D experiences. The service provides tools for building virtual environments, integrating multimedia content, and connecting with audiences in real time. Poly focuses on simplifying complex workflows for creators, developers, and enterprises, delivering APIs and SDKs that facilitate seamless integration of 3D assets into applications, games, and social platforms. Backed by notable investors, Poly aims to democratize immersive content creation and distribution across the web and emerging metaverse ecosystems.'
+
+website: https://poly.app/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Collaboration
+- 3D
+- Immersive
+- Platform
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- bloomberg-beta
+
 common:
+- type: WellKnown
+  url: well-known/withpoly-com-well-known.yml
+- type: Hosts
+  url: hosts/withpoly-com-hosts.yml
+- type: Vendors
+  url: vendors/withpoly-com-vendors.yml
+- type: SDKs
+  url: packages/withpoly-com-packages.yml
+- type: Packages
+  url: packages/withpoly-com-packages.yml
+- type: PrivacyPolicy
+  url: https://poly.app/privacy
+- type: Login
+  url: https://poly.app/login
+- type: GitHubOrganization
+  url: https://github.com/withpoly
+- type: DomainSecurity
+  url: security/withpoly-com-domain-security.yml
 - type: Website
   url: https://withpoly.com
+
+apis: []
+
+x-backed-by:
+- bloomberg-beta
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-22'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://withpoly.com
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
